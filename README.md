@@ -1,2 +1,1 @@
-# Python_Academy_2024
-13.6.202
+Engeto Kurz Pythonu od 13.6.2024
