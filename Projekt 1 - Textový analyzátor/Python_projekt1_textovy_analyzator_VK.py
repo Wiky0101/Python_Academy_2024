@@ -62,20 +62,12 @@ print("{:<5}".format("DELKA"), "|", "{:^20}".format("VÝSKYT"), "|POČET")
 
 print(oddelovac)
 
-delka_slov = []
-for i in veta_bez_znaku:
-    delka_slova = len(i)
-    delka_slov.append(delka_slova)
+delka_slov = [len(i) for i in veta_bez_znaku]
 # spočíta písmena v každém slově ve větě, a append číslo přidá do proměné delka_slov
 
 znak = "*"
 
-delky = {}
-for znaky in delka_slov:
-    if znaky not in delky:
-        delky[znaky] = 1
-    else:
-        delky[znaky] = delky[znaky] + 1
+delky = {znaky: delka_slov.count(znaky) for znaky in delka_slov}
 # projde každé číslo z delky_slov a zapíše do slovníku delky jako klíč slovníku a 
 # když se vyskytne stejně dlouho slovo, 
 # zapíše počet kolikrát se opakuje jako hodnotu slovníku
