@@ -45,11 +45,11 @@ else:
     exit()
 
 veta_bez_znaku = [slovo.strip(",.!?") for slovo in veta] # funkce strip smaže z vety všechny zadané symboly, muselo se to udělat protože jinak nefungovala funkce isalpha, protože když byla za slovem ve vetě čárka, tak už funkce isalpha brala slovo, že není text. 
-prvni_velka_pismena = [slovo for slovo in veta_bez_znaku if slovo.istitle() and slovo.isalpha()] # slovo s prvním velkym písmene a je text
+prvni_velka_pismena = [slovo for slovo in veta_bez_znaku if slovo.[0]istitle() and slovo.isalpha()] # slovo s prvním velkym písmene a je text
 print(len(prvni_velka_pismena), " začínajici slo velkým pismenem")
 velka_pismena = [slovo for slovo in veta_bez_znaku if slovo.isupper() and slovo.isalpha()] # slovo psané cele velkými pismeny a je text
 print(len(velka_pismena), " slova psaná velkými písmeny")
-mala_pismena = [slovo for slovo in veta_bez_znaku if slovo.islower() and slovo.isalpha()] # slovo psane malími písmeny a je text
+mala_pismena = [slovo for slovo in veta_bez_znaku if slovo.islower() and slovo[0].isalpha()] # slovo psane malími písmeny a je text
 print(len(mala_pismena), " slov s malymi písmeny")
 pocet_cisel = [cislo for cislo in veta_bez_znaku if cislo.isnumeric()] # počet čísel ve větě
 print(len(pocet_cisel), " počet čísel")
